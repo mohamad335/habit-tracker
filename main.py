@@ -32,3 +32,11 @@ post_config = {
 }
 response = requests.post(url=pixel_endpoint, json=post_config, headers=headers)
 print(response.text)
+# i want to update the pixela data
+put_pixela = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPHID}/{today.strftime('%Y%m%d')}"
+put_config = {
+    "quantity": "25"
+}
+
+#delete_pixela = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPHID}/{today.strftime('%Y%m%d')}"
+#response = requests.delete(url=delete_pixela, headers=headers)
